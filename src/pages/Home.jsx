@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population,cca3'
+        'https://restcountries.com/v3.1/all?fields=name,flags,capital,region'
       );
       const data = await response.json();
       setItems(data.slice(0, 6));
