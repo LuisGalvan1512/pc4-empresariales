@@ -7,10 +7,14 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://rickandmortyapi.com/api/character');
+      // ✅ SOLUCIÓN: agregar ?fields= con los campos necesarios
+      const response = await fetch(
+        'https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population,cca3'
+      );
       const data = await response.json();
-      setItems(data.results.slice(0, 6));
+      setItems(data.slice(0, 6));
     };
+
     if (items.length === 0) {
       fetchData();
     }
@@ -19,8 +23,8 @@ const Home = () => {
   return (
     <div className="container py-5">
       <div className="text-center mb-5">
-        <h1 className="display-4">Casita - Lugar de inicio</h1>
-        <p className="lead">Ojala si sirva</p>
+        <h1 className="display-4">Paisess Gaa</h1>
+        <p className="lead">Somos consumidores (de enpoints xd)</p>
       </div>
       <CardList items={items} />
     </div>

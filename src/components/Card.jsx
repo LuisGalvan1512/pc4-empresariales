@@ -16,9 +16,7 @@ const Card = ({ item }) => {
           <p className="card-text mb-1">
             <strong>Region:</strong> {item.region}
           </p>
-          <p className="card-text mb-0">
-            <strong> Population:</strong> {item.population?.toLocaleString()}
-          </p>
+
         </div>
       </div>
     </div>
