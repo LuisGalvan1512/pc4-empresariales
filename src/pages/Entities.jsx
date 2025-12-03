@@ -11,7 +11,6 @@ const Entities = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // ✅ SOLUCIÓN: agregar ?fields= con los campos necesarios
         const response = await fetch(
           'https://restcountries.com/v3.1/all?fields=name,flags,capital,region'
         );
